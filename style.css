@@ -1,0 +1,575 @@
+ /* ===== ESTILO GERAL ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f4ef;
+      color: #333;
+      text-align: center;
+    }
+
+/* ===== NAV PADRÃO (TELAS PEQUENAS) ===== */
+header {
+  background-color: #c6aa75;
+  padding: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+header>h3{
+  font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      text-align: left;
+      margin-left: 15px;
+      color: #5c5345;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== QUANDO FOR TELA GRANDE ===== */
+@media (min-width: 768px) {
+  header {
+    position: sticky;
+    top: 0;
+    bottom: auto;
+    background-color: #c6aa75;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+}
+
+
+    .menu-icons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:  #c6aa75;
+  padding: 10px 0;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.menu-icons a {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.menu-icons i {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.menu-icons a:hover,
+.menu-icons a.active {
+  color: #f8f4ef; /* cor dourada do teu tema */
+}
+
+
+    main {
+      padding: 60px 20px;
+    }
+
+    section {
+      margin-bottom: 80px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    section h2 {
+      color: #8b6b3e;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ===== CONVITE ===== */
+    #convite img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    #convite img:hover {
+      transform: scale(1.02);
+    }
+
+    .confirmar-presenca {
+      display: flex;
+  flex-direction: column; /* coloca ícone em cima, texto embaixo */
+  align-items: center; /* centraliza horizontalmente */
+  justify-content: center; /* centraliza verticalmente, se tiver altura definida */
+  text-align: center;
+  margin-top: 15px;
+  
+    }
+
+    .confirmar-presenca i {
+      font-size: 4rem;
+      color: #8b6b3e;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease, color 0.3s ease;
+      cursor: pointer;
+      
+      
+    }
+
+    .confirmar-presenca i:hover {
+      transform: scale(1.15);
+      color: #a9834b;
+    }
+
+    .confirmar-presenca a {
+      text-decoration: none;
+      color: #8b6b3e;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      transition: color 0.3s ease;
+    }
+
+    .confirmar-presenca a:hover {
+      color: #a9834b;
+    }
+
+    /* ===== PROGRAMA ===== */
+    #programa {
+      background-color: #f8f4ef;
+      padding: 60px 20px;
+      border-radius: 10px;
+    }
+
+    #programa h2 {
+      font-family: 'Poppins', serif;
+      color: #8b6b3e;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      text-transform: none;
+      letter-spacing: 1px;
+    }
+
+    .programa-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .programa-container .data {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: #a0834b;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .evento {
+      margin-bottom: 60px;
+    }
+
+    .hora {
+      font-size: 1.8rem;
+      color: #333;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .titulo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #8b6b3e;
+      margin-bottom: 10px;
+    }
+
+    .local {
+      font-size: 1.1rem;
+      color: #555;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .divisor {
+      width: 70px;
+      height: auto;
+      margin: 30px auto;
+      display: block;
+      opacity: 0.7;
+      animation: girar 6s infinite linear;
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .botoes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      border: 2px solid #8b6b3e;
+      color: #8b6b3e;
+      background: transparent;
+      padding: 10px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #8b6b3e;
+      color: white;
+      transform: translateY(-2px);
+    }
+    /* ===== PRESENTES ===== */
+#presentes {
+  background-color: #f8f4ef;
+  padding: 60px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.presentes-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.icone-presente {
+  width: 80px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+#presentes h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #8b6b3e;
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.texto-intro {
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.contas p {
+  font-size: 1rem;
+  color: #333;
+  margin: 10px 0;
+}
+.icone-presente {
+  width: 80px;
+  margin-bottom: 20px;
+  transform-origin: top center;
+  animation: balancar 2s infinite ease-in-out;
+}
+
+@keyframes balancar {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+/* ===== DEDICATÓRIA ===== */
+#dedicatoria {
+  background-color: #f8f4ef;
+  padding-bottom: 60px;
+  text-align: center;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.dedicatoria-foto {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 5px solid #c6aa75;
+  border-radius: 10px;
+}
+
+.dedicatoria-conteudo {
+   background-color: #fff;
+  max-width: 700px;
+  margin: -40px auto 0 auto; /* empurra para baixo */
+  padding: 60px 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.icone-dedicatoria {
+  width: 85px;
+  margin-bottom: 15px;
+  animation: flutuar 3s infinite ease-in-out;
+  /*filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));*/
+}
+
+@keyframes flutuar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+#dedicatoria h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  color: #8b6b3e;
+  margin-bottom: 10px;
+}
+
+#dedicatoria p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.dedicatoria-botoes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-dedicatoria {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid #8b6b3e;
+  border-radius: 30px;
+  color: #8b6b3e;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-dedicatoria:hover {
+  background-color: #8b6b3e;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.dedicatoria-frase {
+  margin-top: 30px;
+  font-style: italic;
+  color: #8b6b3e;
+  font-size: 1.1rem;
+}
+/* === MODAL DE DEDICATÓRIA === */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+}
+
+.modal-conteudo {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 0;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: aparecerModal 0.4s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes aparecerModal {
+  from {opacity: 0; transform: translateY(-30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-header {
+  background-color: #5c5345;
+  color: #fff;
+  padding: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 20px 30px;
+  text-align: center;
+}
+
+.modal-body p {
+  color: #555;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.modal-body input,
+.modal-body textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1.8px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+  border-color: #8b6b3e;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  border-top: 1px solid #ddd;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.btn-cancelar,
+.btn-ok {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancelar {
+  border: 1px solid #aaa;
+  background: #fff;
+  color: #444;
+  margin-right: 10px;
+}
+
+.btn-cancelar:hover {
+  background-color: #f0f0f0;
+}
+
+.btn-ok {
+  border: none;
+  background-color: #8b6b3e;
+  color: #fff;
+}
+
+.btn-ok:hover {
+  background-color: #a6844e;
+}
+/* LISTA DE MENSAGENS */
+#listaMensagens {
+  max-height: 250px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.mensagem {
+  background: #f9f6f2;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border-left: 4px solid #8b6b3e;
+}
+
+.mensagem strong {
+  color: #8b6b3e;
+}
+
+
+
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 25px 10px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 600px) {
+      nav {
+        gap: 15px;
+      }
+
+      section h2 {
+        font-size: 1.6rem;
+      }
+
+      .confirmar-presenca i {
+        font-size: 3rem;
+      }
+
+      .btn {
+        width: 80%;
+      }
+    }

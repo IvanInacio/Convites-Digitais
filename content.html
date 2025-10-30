@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casamento Bruna & Ianique</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Dancing+Script:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+</style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="menu-icons">
+      <a href="index.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+      <a href="#convite"><i class="fa-solid fa-user-check"></i><span>Convite</span></a>
+      <a href="#programa"><i class="fa-solid fa-calendar-days"></i><span>Programa</span></a>
+      <a href="#presentes"><i class="fa-solid fa-gift"></i><span>Presentes</span></a>
+      <a href="#dedicatoria"><i class="fa-solid fa-message"></i><span>Mensagens</span></a>
+    </nav>
+
+    <h3>Ivan Fernando</h3>
+
+  </header>
+<audio id="bg-music" src="musica.mp3" loop></audio>
+  <main>
+    <!-- ===== CONVITE ===== -->
+    <section id="convite">
+      <h2>Convite</h2>
+      <img src="videos/Confirma presença.gif" alt="Convite de casamento">
+      <div class="confirmar-presenca">
+        
+        <a href="https://script.google.com/macros/s/AKfycbx1LRHbmw4rvcPZ87CI_Y9A-NdsfDPj5inmmFlzq7PlM5BaiNGygeBLLQ1LqpgoUBT5/exec" target="_blank"><i class="fa-solid fa-circle-check"></i><span>Confirmar presença</span></a>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAMA ===== -->
+    <section id="programa">
+      <h2>Programa da Celebração</h2>
+      <div class="programa-container">
+        <p class="data">20 de setembro de 2025</p>
+
+        <div class="evento">
+          <p class="hora">11:30</p>
+          <h3 class="titulo">Cerimônia Religiosa</h3>
+          <p class="local">Igreja Evangélica Assembleia de Deus - Baixa<br>(Congregação da Sommerschield)</p>
+          <div class="botoes">
+            <a href="https://www.google.com/maps?q=Igreja+Evangélica+Assembleia+de+Deus+Baixa" target="_blank" class="btn">Como Chegar?</a>
+            <a href="#" class="btn">Agendar</a>
+          </div>
+        </div>
+
+        <img src="images/Aliança.png.png" alt="Alianças" class="divisor">
+
+        <div class="evento">
+          <p class="hora">14:00</p>
+          <h3 class="titulo">Copo de Água</h3>
+          <p class="local">Idealize Eventos</p>
+          <div class="botoes">
+            <a href="https://www.google.com/maps?q=Idealize+Eventos" target="_blank" class="btn">Como Chegar?</a>
+            <a href="#" class="btn">Agendar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRESENTES ===== -->
+<section id="presentes">
+  <div class="presentes-container">
+    <img src="images/presente.png.png" alt="Ícone de presente" class="icone-presente">
+    <h2>Presentes</h2>
+    <p class="texto-intro">
+      Querido convidado(a):<br>
+      Sua presença é o nosso maior presente.<br>
+      Caso queira nos presentear, sugerimos que seja em valores monetários, 
+      e que fosse encaminhado para as contas bancárias abaixo:
+    </p>
+
+    <div class="contas">
+      <p><strong>BCI:</strong> 00080000844675715 – Ivan Inacio Fernando</p>
+      <p><strong>BIM:</strong> 0001000000844675725 – Ivan Inacio Fernando</p>
+      <p><strong>MPESA:</strong> 844675715 – Ivan Inacio Fernando</p>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===== DEDICATÓRIA ===== -->
+<section id="dedicatoria">
+  <img src="images/Logotipo Monograma Elegante Preto(1).png" alt="Casal" class="dedicatoria-foto">
+
+  <div class="dedicatoria-conteudo">
+    <img src="videos/Logotipo Monograma Elegante Preto(1).gif" alt="Ícone Dedicatória" class="icone-dedicatoria">
+    <h2>Dedicatórias</h2>
+    <p>Envie uma mensagem especial ou dedicatória</p>
+
+    <div class="dedicatoria-botoes">
+      <button class="btn-dedicatoria" id="abrirModalEnviar">Enviar</button>
+      <button class="btn-dedicatoria" id="abrirModalVer">Ver Mensagens</button>
+    </div>
+
+    <p class="dedicatoria-frase">"Agradecemos e esperamos por si"</p>
+  </div>
+
+  <!-- MODAL ENVIAR -->
+  <div id="modalEnviar" class="modal">
+    <div class="modal-conteudo">
+      <div class="modal-header">
+        <h3>Dedicatórias</h3>
+      </div>
+      <div class="modal-body">
+        <p>Envie uma mensagem especial ou dedicatória</p>
+        <input type="text" id="nome" placeholder="Insira o seu nome (Opcional)">
+        <textarea id="mensagem" placeholder="Escreva a sua mensagem"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button id="cancelarEnviar" class="btn-cancelar">Cancelar</button>
+        <button id="enviarMensagem" class="btn-ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL VER MENSAGENS -->
+  <div id="modalVer" class="modal">
+    <div class="modal-conteudo">
+      <div class="modal-header">
+        <h3>Mensagens Recebidas</h3>
+      </div>
+      <div class="modal-body" id="listaMensagens">
+        <p>Ainda não há dedicatórias 😍</p>
+      </div>
+      <div class="modal-footer">
+        <button id="fecharVer" class="btn-ok">Fechar</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  </main>
+
+  <footer>
+    <p>Com amor, Bruna & Ianique ❤️ — Todos os direitos reservados</p>
+  </footer>
+
+  <!-- ===== SCRIPT DA MÚSICA ===== -->
+<script>
+const musicaAtiva = sessionStorage.getItem('musicaAtiva');
+
+if (musicaAtiva === 'sim') {
+  const audio = new Audio('musica/casamento.mp3');
+  audio.loop = true;
+
+  // Tentamos tocar imediatamente
+  audio.play().then(() => {
+    console.log('🎵 Música tocando normalmente');
+  }).catch(() => {
+    console.log('🔇 Autoplay bloqueado — mostrando botão de ativação');
+
+    // Criar botão visível para ativar o som
+    const botao = document.createElement('button');
+    botao.textContent = '🔊 Ativar música';
+    botao.style.position = 'fixed';
+    botao.style.top = '20px';
+    botao.style.right = '20px';
+    botao.style.padding = '12px 18px';
+    botao.style.border = 'none';
+    botao.style.borderRadius = '25px';
+    botao.style.background = '#b08947';
+    botao.style.color = 'white';
+    botao.style.fontWeight = 'bold';
+    botao.style.cursor = 'pointer';
+    botao.style.boxShadow = '0 4px 10px rgba(0,0,0,0.3)';
+    botao.style.zIndex = '9999';
+    botao.style.fontFamily = 'Poppins, sans-serif';
+    botao.style.transition = 'background 0.3s ease';
+    
+    botao.onmouseenter = () => botao.style.background = '#d2a85a';
+    botao.onmouseleave = () => botao.style.background = '#b08947';
+
+    document.body.appendChild(botao);
+
+    // Quando o usuário clicar, toca o som e remove o botão
+    botao.addEventListener('click', () => {
+      audio.play().then(() => {
+        botao.remove();
+      });
+    });
+  });
+}
+</script>
+<script>
+const modalEnviar = document.getElementById("modalEnviar");
+const modalVer = document.getElementById("modalVer");
+const abrirEnviar = document.getElementById("abrirModalEnviar");
+const abrirVer = document.getElementById("abrirModalVer");
+const cancelarEnviar = document.getElementById("cancelarEnviar");
+const fecharVer = document.getElementById("fecharVer");
+const enviarMensagem = document.getElementById("enviarMensagem");
+const listaMensagens = document.getElementById("listaMensagens");
+
+let mensagens = []; // armazenar mensagens localmente
+
+abrirEnviar.onclick = () => modalEnviar.style.display = "block";
+abrirVer.onclick = () => {
+  modalVer.style.display = "block";
+  atualizarLista();
+};
+cancelarEnviar.onclick = () => modalEnviar.style.display = "none";
+fecharVer.onclick = () => modalVer.style.display = "none";
+window.onclick = e => {
+  if (e.target === modalEnviar) modalEnviar.style.display = "none";
+  if (e.target === modalVer) modalVer.style.display = "none";
+};
+
+enviarMensagem.onclick = () => {
+  const nome = document.getElementById("nome").value.trim() || "Anónimo";
+  const mensagem = document.getElementById("mensagem").value.trim();
+
+  if (!mensagem) {
+    alert("Por favor, escreva uma mensagem antes de enviar.");
+    return;
+  }
+
+  mensagens.push({ nome, mensagem });
+  alert("Mensagem enviada com sucesso!");
+  
+  // limpar campos
+  document.getElementById("nome").value = "";
+  document.getElementById("mensagem").value = "";
+  modalEnviar.style.display = "none";
+};
+
+function atualizarLista() {
+  if (mensagens.length === 0) {
+    listaMensagens.innerHTML = "<p>Ainda não há dedicatórias 😍</p>";
+    return;
+  }
+
+  listaMensagens.innerHTML = mensagens.map(
+    m => `<div class='mensagem'><strong>${m.nome}</strong><br>${m.mensagem}</div>`
+  ).join("");
+}
+</script>
+
+
+
+
+</body>
+</html>
+
+

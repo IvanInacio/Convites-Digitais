@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casamento Bruna & Ianique</title>
+
+  <style>
+    /* ===== ESTILOS GERAIS ===== */
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background-color: #c6aa75;
+      color: #333;
+      text-align: center;
+    }
+
+    header {
+      background: url('imagens/banner.jpg') center/cover no-repeat;
+      min-height: 20vh;
+      display: flex;
+      flex-direction: column;
+      
+      color: white;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 0 10px;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    /* ===== CONTEÚDO PRINCIPAL ===== */
+    main {
+      padding: 10px 10px;
+      background-color: #c6aa75;
+    }
+
+    main img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    main img:hover {
+      transform: scale(1.03);
+    }
+
+    /* ===== BOTÕES ===== */
+    #buttons {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .btn-default {
+      background-color: #fff;
+      border: 2px solid #b08947;
+      color: #b08947;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    }
+
+    .btn-default:hover {
+      background-color: #b08947;
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    }
+
+    .btn-default:active {
+      transform: scale(0.98);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    /* ===== RODAPÉ ===== */
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== RESPONSIVIDADE ===== */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      main {
+        padding: 10px;
+      }
+
+      
+      .btn-default {
+        width: 80%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        min-height: 60vh;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      main img {
+        max-width: 100%;
+      }
+      main{
+        margin-top: -300px;
+      }
+
+      .btn-default {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body> 
+  <header>
+    <h1>Bruna & Ianique</h1>
+    <p>27 de Setembro de 2025</p>
+  </header>
+
+  <main>
+    <img src="videos/Moldura para Story casamento floral azul e dourado aquarela.gif" 
+         alt="Convite animado de casamento">
+         
+    <div id="buttons">
+      <button class="btn-default" onclick="verComMusica()">Ver com Música</button>
+
+
+
+      <button type="button" class="btn-default" onclick="window.location.href='content.html?musica=nao'">Ver sem Música</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>Com amor, Bruna & Ianique ❤️ — Todos os direitos reservados</p>
+  </footer>
+
+<script>
+function verComMusica() {
+  // Indica que o usuário quer música
+  sessionStorage.setItem('musicaAtiva', 'sim');
+  // Redireciona
+  window.location.href = 'content.html';
+}
+</script>
+
+</body>
+</html>
+
